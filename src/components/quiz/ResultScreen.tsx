@@ -45,6 +45,31 @@ const ResultScreen = ({ result, onRestart }: ResultScreenProps) => {
             {level.description}
           </p>
         </motion.div>
+        
+        {/* Gift CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="bg-card/90 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-primary/20 shadow-lg text-center"
+        >
+          <p className="text-base md:text-lg font-heading font-semibold text-foreground mb-4">
+            <span className="text-gradient-gold font-bold">
+              Получи в подарок скидку 90%
+            </span>{" "}
+            на проверенную систему по достижению устойчивого ощущения счастья,
+            к которой я шел 20 лет.
+          </p>
+        
+          <a
+            href="https://www.happi10.com/#programs"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block btn-primary-gradient text-accent-foreground font-heading font-bold py-4 px-10 rounded-xl text-lg btn-glow transition-all duration-300 hover:brightness-110 hover:scale-105"
+          >
+            Получить доступ
+          </a>
+        </motion.div>
 
         {/* Radar chart */}
         <motion.div

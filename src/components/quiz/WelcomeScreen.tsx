@@ -16,6 +16,18 @@ const WelcomeScreen = ({ onStart }: WelcomeScreenProps) => {
     <div className="min-h-screen bg-warm-gradient flex items-center justify-center px-4 py-8">
       <div className="max-w-2xl w-full text-center">
         <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="flex justify-center mb-6"
+        >
+          <img
+           src={`${import.meta.env.BASE_URL}newlogo.svg`}
+            alt="HAPPI10"
+           className="h-16 md:h-20 opacity-90 mb-8"
+          />
+        </motion.div>
+        <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: "spring", duration: 0.8 }}
